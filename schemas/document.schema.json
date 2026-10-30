@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VietIRRDocumentManifestRecord",
+  "description": "Schema for a single document entry in the VietIRR-RAG corpus manifest.",
+  "type": "object",
+  "required": [
+    "doc_id",
+    "document_title",
+    "issuing_organization",
+    "document_type",
+    "publication_year",
+    "page_count",
+    "file_size_bytes",
+    "sha256",
+    "source_url",
+    "corpus_layer",
+    "access_status",
+    "redistribution_status",
+    "total_evidence_count"
+  ],
+  "properties": {
+    "doc_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_]+$",
+      "description": "Unique canonical identifier for the document."
+    },
+    "document_title": {
+      "type": "string",
+      "description": "Official title or descriptor of the document."
+    },
+    "issuing_organization": {
+      "type": "string",
+      "description": "Governmental or technical body that promulgated the document."
+    },
+    "document_type": {
+      "type": "string",
+      "description": "Classification: Technical Report, Operating Procedure, Decision, Plan, Notice."
+    },
+    "publication_year": {
+      "type": "string",
+      "description": "Year of issuance (4 digits or UNKNOWN)."
+    },
+    "page_count": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Total number of pages in the source document."
+    },
+    "file_size_bytes": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Physical size of the source PDF in bytes."
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$",
+      "description": "Cryptographic SHA-256 hash of the authentic PDF file."
+    },
+    "source_url": {
+      "type": "string",
+      "description": "Canonical public URL where the document was published."
+    },
+    "corpus_layer": {
+      "type": "string",
+      "enum": ["LEGACY_V3_2_REFERENCE", "V4_1_NEW_SOURCE"],
+      "description": "Corpus cohort layer indicating baseline or expansion version."
+    },
+    "access_status": {
+      "type": "string",
+      "enum": ["PUBLIC_OFFICIAL", "RESTRICTED", "PERMISSION_UNKNOWN"],
+      "description": "Public availability status at source agency."
+    },
+    "redistribution_status": {
+      "type": "string",
+      "enum": ["REDISTRIBUTION_ALLOWED", "SOURCE_LINK_ONLY", "PRIVATE_OR_RESTRICTED"],
+      "description": "Redistribution permission status."
+    },
+    "text_evidence_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Count of text evidence blocks extracted."
+    },
+    "table_evidence_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Count of table evidence blocks extracted."
+    },
+    "total_evidence_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total evidence units derived from this document."
+    }
+  }
+}

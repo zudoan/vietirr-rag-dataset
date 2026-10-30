@@ -1,0 +1,47 @@
+# VIETIRR-RAG DATASET LICENSING & TERMS OF USE
+
+## 1. Dataset Curation, Annotations, and Metadata License
+The dataset annotations, layout structuring, extracted table matrices, question-answering benchmark pairs (DEV-93, ALL-QA), manifests, and JSON schemas in this repository are released under the:
+
+**Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**
+
+You are free to:
+- **Share**: Copy and redistribute the material in any medium or format.
+- **Adapt**: Remix, transform, and build upon the material for non-commercial research and educational purposes.
+
+Under the following terms:
+- **Attribution**: You must give appropriate credit to the VietIRR-RAG authors and provide a link to the repository.
+- **NonCommercial**: You may not use the material for commercial purposes without explicit permission.
+- **ShareAlike**: If you remix, transform, or build upon the material, you must distribute your contributions under the same license.
+
+## 2. Code and Scripts License
+All validation scripts, loaders, and helper tools located in `scripts/`, `examples/`, and root directories are licensed under the **MIT License**:
+
+```text
+MIT License
+
+Copyright (c) 2026 VietIRR-RAG Research Team
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## 3. Third-Party Source Documents Notice
+The original source PDF documents referenced by this dataset are official publications, reports, decisions, and bulletins issued by Vietnamese governmental bodies (Cục Thủy lợi, Cục Quản lý đê điều và Phòng, chống thiên tai, Văn phòng Chính phủ) and research institutes (Viện Quy hoạch Thủy lợi Miền Nam). 
+
+These documents are referenced by public URL, title, issuing organization, and cryptographic SHA-256 hash. The VietIRR-RAG project does not claim copyright over the underlying governmental source texts. Users must comply with the public access terms and policies of the respective issuing agencies when retrieving or utilizing raw source documents.

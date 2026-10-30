@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this dataset or benchmarks in your research, please cite it as below."
+title: "VietIRR-RAG Dataset: Vietnamese Irrigation Document Dataset with Structured Text, Tables, Provenance Metadata, and Evaluation Resources for Retrieval-Augmented Generation"
+version: 4.1.0
+date-released: 2026-10-30
+url: "https://github.com/zudoan/vietirr-rag-dataset"
+authors:
+  - family-names: "Doan"
+    given-names: "Zu"
+    affiliation: "Thuy Loi University"
+repository-code: "https://github.com/zudoan/vietirr-rag-dataset"
+keywords:
+  - "vietnamese-nlp"
+  - "retrieval-augmented-generation"
+  - "irrigation-engineering"
+  - "hydrology"
+  - "multimodal-rag"
+  - "document-understanding"
+  - "benchmark-dataset"
+license: "CC-BY-NC-SA-4.0"

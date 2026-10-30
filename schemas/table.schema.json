@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VietIRRStructuredTableRecord",
+  "description": "Schema for structured extracted table data with cell matrices and semantic dimensions.",
+  "type": "object",
+  "required": [
+    "table_id",
+    "doc_id",
+    "page_number",
+    "headers",
+    "rows",
+    "cells",
+    "normalized_representation"
+  ],
+  "properties": {
+    "table_id": {
+      "type": "string",
+      "description": "Unique canonical identifier for the table region (TAB_...)."
+    },
+    "doc_id": {
+      "type": "string",
+      "description": "Parent document identifier."
+    },
+    "page_id": {
+      "type": "string",
+      "description": "Parent page identifier."
+    },
+    "page_number": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "1-based page number."
+    },
+    "bbox": {
+      "type": "array",
+      "description": "Bounding box coordinates [x1, y1, x2, y2] on the page."
+    },
+    "caption": {
+      "type": "string",
+      "description": "Table title or caption if present."
+    },
+    "headers": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Extracted column header strings."
+    },
+    "rows": {
+      "type": "array",
+      "description": "Array of table row data arrays."
+    },
+    "cells": {
+      "type": "array",
+      "description": "Structured cell metadata records with row, col, content, and cell evidence IDs."
+    },
+    "column_labels": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Normalized column header labels."
+    },
+    "row_labels": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Normalized row header labels."
+    },
+    "normalized_representation": {
+      "type": "string",
+      "description": "Markdown or linearized representation for LLM ingestion."
+    },
+    "raw_representation": {
+      "type": "string",
+      "description": "Raw extracted representation."
+    },
+    "semantic_dimensions": {
+      "type": "object",
+      "description": "Domain attributes (reservoirs, water levels, dates, flow rates, capacities)."
+    },
+    "sha256": {
+      "type": "string",
+      "description": "SHA-256 hash of parent document."
+    }
+  }
+}

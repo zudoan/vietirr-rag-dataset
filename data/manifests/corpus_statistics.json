@@ -1,0 +1,26 @@
+{
+  "dataset_name": "VietIRR-RAG Dataset",
+  "dataset_version": "V4_R6_FROZEN",
+  "baseline_version": "V3.2_FINAL_SEMANTIC",
+  "release_date": "2026-10-30",
+  "language": "vi",
+  "domain": "Vietnamese Irrigation and Water Resources Engineering",
+  "documents": {
+    "total_documents": 93,
+    "legacy_v3_documents": 89,
+    "v4_new_documents": 4,
+    "total_pages": 2578,
+    "total_raw_pdf_bytes": 199873549
+  },
+  "evidence_units": {
+    "total_evidence_units": 27144,
+    "text_regions": 27053,
+    "table_regions": 91,
+    "structured_tables_extracted": 91
+  },
+  "benchmarks": {
+    "dev_93_evaluation_items": 93,
+    "all_qa_evaluation_pool": 545,
+    "e2e_retrieval_traces": 24
+  }
+}

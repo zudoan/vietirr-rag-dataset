@@ -1,0 +1,24 @@
+{
+  "benchmark_name": "VietIrrDocBench",
+  "version": "1.0.0",
+  "datasets": [
+    {
+      "split": "dev_93",
+      "file": "benchmarks/qa/dev_93.jsonl",
+      "count": 93,
+      "description": "Frozen 93 multi-evidence evaluation set for cross-page and cross-document reasoning."
+    },
+    {
+      "split": "all_qa_545",
+      "file": "benchmarks/qa/all_qa_545.jsonl",
+      "count": 545,
+      "description": "Full curated QA pool including core, challenge, and pilot questions."
+    },
+    {
+      "split": "e2e_eval_24",
+      "file": "benchmarks/qa/e2e_eval_24.jsonl",
+      "count": 24,
+      "description": "End-to-end evaluation traces assessing R6 retrieval precision and generation faithfulness."
+    }
+  ]
+}

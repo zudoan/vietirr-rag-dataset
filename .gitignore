@@ -1,0 +1,31 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches and environment
+.venv/
+venv/
+ENV/
+.env
+.env.*
+!.env.example
+
+# Temporary and local IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+*.tmp
+*.bak
+
+# Avoid storing downloaded full PDF binaries in Git
+data/documents/*.pdf
+!data/documents/.gitkeep
+
+# Large models / weights
+*.bin
+*.pt
+*.safetensors
+*.onnx

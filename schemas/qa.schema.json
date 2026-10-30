@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VietIRRQAEvaluationRecord",
+  "description": "Schema for benchmark question-answering evaluation items (e.g., DEV-93, ALL-QA).",
+  "type": "object",
+  "required": [
+    "qa_id",
+    "question",
+    "answer",
+    "gold_doc_ids",
+    "gold_page_ids",
+    "gold_evidence_ids",
+    "retrieval_evidence_ids"
+  ],
+  "properties": {
+    "qa_id": {
+      "type": "string",
+      "description": "Unique canonical identifier for the benchmark question (e.g. V3_1_CHAL_...)."
+    },
+    "question": {
+      "type": "string",
+      "description": "Evaluation question text in Vietnamese."
+    },
+    "answer": {
+      "type": "string",
+      "description": "Gold reference answer string."
+    },
+    "gold_doc_ids": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Document IDs containing supporting evidence."
+    },
+    "gold_page_ids": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Page IDs containing supporting evidence."
+    },
+    "gold_evidence_ids": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Fine-grained evidence units / cells containing facts needed for answer."
+    },
+    "retrieval_evidence_ids": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Coarse-grained retrieval units (REG_... or TAB_...) in the corpus index."
+    },
+    "location_type": {
+      "type": "string",
+      "enum": ["SAME_PAGE", "CROSS_PAGE", "CROSS_DOCUMENT"],
+      "description": "Dispersion of evidence required to answer the question."
+    },
+    "modality": {
+      "type": "string",
+      "description": "Modality of facts: TEXT, TABLE, or MIXED."
+    },
+    "split": {
+      "type": "string",
+      "description": "Benchmark split: dev, test, or train."
+    }
+  }
+}
